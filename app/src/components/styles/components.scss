@@ -1,0 +1,71 @@
+
+
+
+$primary: #1E3A8A;
+$secondary: #F6BD2E;
+$blue-700: #122454;
+$blue-100: #C9D4F3;
+
+@import "~bootstrap/scss/_mixins";
+@import "~bootstrap/scss/_functions";
+@import "~bootstrap/scss/_variables";
+@import "~bootstrap/scss/bootstrap";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    width: 1120px;
+    background-color: $primary;
+    color: white;
+    padding: 10px 5px 12px;
+    text-align: center;
+    border-bottom: 1px solid #ffffff;
+    gap: 10px;
+
+    .logo_n_name {
+        h1 {
+            font-size: 24px;
+            font-weight: bolder;
+            margin: 0;
+        }
+    }
+    nav {
+        gap: 40px;
+        padding: 5px;
+    }
+}
+
+.home_hero {
+    width: 1120px;
+    background-color: $primary;
+    margin-top: 20px;
+    padding: 10px 5px;
+    .hero {
+        width: 520px;
+        gap: 30px;
+        h3 {
+            color: white;
+            font-size: 48px;
+            font-weight: bold;
+            margin: 0;
+        }
+        p {
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            margin: 0;
+        }
+    }
+    .hero_image {
+        width: 535px;
+        height: 378px;
+    }
+}
