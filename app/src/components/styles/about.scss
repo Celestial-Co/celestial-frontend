@@ -1,0 +1,221 @@
+
+$primary: #1E3A8A;
+$secondary: #F6BD2E;
+$blue-700: #122454;
+$blue-100: #C9D4F3;
+
+$lg-font-size: 48px;
+$heading-font-size: 24px;
+$subheading-font-size: 32px;
+$normal-font-size: 16px;
+$heading-font-weight: 800;
+$subheading-font-weight: 700;
+$normal-font-weight: 500;
+
+@import "~bootstrap/scss/_mixins";
+@import "~bootstrap/scss/_functions";
+@import "~bootstrap/scss/_variables";
+@import "~bootstrap/scss/bootstrap";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.about_about {
+     h3 {
+        font-size: $lg-font-size;
+        font-weight: $heading-font-weight;
+        color: $secondary;
+    }
+    h4 {
+        font-size: $subheading-font-size;
+        font-weight: $subheading-font-weight;
+        color: $secondary;
+    }
+    p {
+        font-size: $normal-font-size;
+        color: $white;
+        margin-top: 10px;
+        line-height: 1.6;
+    }
+}
+
+.about_section {
+    background-color: $primary;
+    margin: 0 auto;
+    padding: 40px 5px;
+   
+}
+.our_story_section {
+    background-color: $primary;
+    padding: 50px 5px;
+    color: $white;
+    .highlight_photo {
+        width: 270px;
+        height: 180px;
+        border-radius: 8px;
+        background-color: $white;
+        background-size: cover;
+    }
+    p {
+        font-size: $normal-font-size;
+        font-weight: $normal-font-weight;
+    }
+    .story_content {
+        height: 400px;
+        background-color: $blue-100;
+        gap: 30px;
+        padding: 0 5px;
+        h4, p, span {
+            color:  $black;
+        }
+        p {
+            font-size: $normal-font-size;
+            font-weight: $normal-font-weight;
+            line-height: 1.6;
+        }
+        a {
+            color: $black;
+        }
+        .story_main_image {
+            width: 500px;
+            height: 340px;
+            background-color: $secondary;
+            img {
+                width: 500px;
+                height: 340px;
+            }
+        }
+        .client_profiles {
+            :nth-child(2n) {
+                transform: translateX(-25px);
+            } 
+            :nth-child(3n) {
+                transform: translateX(-50px);
+            }
+        }
+        .client_profile {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            border: 3px solid $blue-100;
+            background-color: $secondary;
+            margin: 0;
+
+        }
+
+    }
+}
+
+.value_card {
+    width: 500px;
+    height: 180px;
+    padding: 40px 20px 20px;
+    position: relative;
+    border-radius: 5px;
+    background-color: $blue-100;
+    .value_icon {
+        position: absolute;
+        top: -30px;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: $primary;
+        border: 2px solid $blue-100;
+    }
+    h4 {
+        font-size: $heading-font-size;
+        font-weight: $subheading-font-weight;
+    }
+    p {
+        font-size: $normal-font-size;
+        line-height: 1.6;
+        margin-top: 10px;
+        color: $black !important;
+    }
+
+}
+.about_values_section {
+    background-color: $primary;
+    padding: 40px 5px;
+    margin: 20px auto;
+    gap: 60px;
+    h3 {
+        font-size: $subheading-font-size;
+        font-weight: $heading-font-weight;
+        color: $secondary;
+        margin-bottom: 30px;
+    }
+    p {
+        font-size: $normal-font-size;
+        color: $white;
+        margin-top: 10px;
+        line-height: 1.6;
+    }
+    .values_container {
+        gap: 60px;
+    }
+}
+
+.our_team_section {
+    margin-top: 40px;
+    padding: 40px 5px;
+    background-color: $primary;
+    gap: 30px;
+    .team_intro {
+        gap: 30px;
+        h3 {
+            font-size: $subheading-font-size;
+            font-weight: $heading-font-weight;
+            color: $secondary;
+        }
+        p {
+            font-size: $normal-font-size;
+            color: $white;
+            line-height: 1.6;
+            margin-top: 0;
+        }
+    }
+    .team_gallery {
+        height: 300px;
+    }
+}
+.team_member_card {
+    background-color: $orange-400;
+    width: 250px;
+    height: 300px;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    .team_member_info {
+        position: absolute;
+        bottom: 0;
+        padding: 5px 10px;
+        text-align: center;
+        background-color: rgba(#C9D4F3, 0.4);
+        border-radius: 0 0 8px 8px;
+        h5 {
+            font-size: $normal-font-size;
+            font-weight: $subheading-font-weight;
+            color: $black;
+        }
+        p {
+            font-size: $normal-font-size;
+            color: $black;
+            margin: 0;
+        }
+        .team_member_image {
+            width: 400px;
+            height: auto;
+            border-radius: 8px 8px 0 0;
+            background-color: $secondary;
+            z-index: -1;
+        }
+    }
+}
