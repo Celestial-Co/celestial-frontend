@@ -1,10 +1,15 @@
 
-
-
 $primary: #1E3A8A;
 $secondary: #F6BD2E;
 $blue-700: #122454;
 $blue-100: #C9D4F3;
+
+$lg-font-size: 48px;
+$heading-font-size: 24px;
+$subheading-font-size: 32px;
+$normal-font-size: 16px;
+$heading-font-weight: 800;
+$subheading-font-weight: 700;
 
 @import "~bootstrap/scss/_mixins";
 @import "~bootstrap/scss/_functions";
@@ -21,6 +26,14 @@ a {
     color: inherit;
 }
 
+.logo_n_name {
+    h1 {
+        font-size: $heading-font-size;
+        font-weight: $heading-font-weight;
+        margin: 0;
+    }
+}
+
 header {
     width: 1120px;
     background-color: $primary;
@@ -30,13 +43,6 @@ header {
     border-bottom: 1px solid #ffffff;
     gap: 10px;
 
-    .logo_n_name {
-        h1 {
-            font-size: 24px;
-            font-weight: bolder;
-            margin: 0;
-        }
-    }
     nav {
         gap: 40px;
         padding: 5px;
@@ -47,25 +53,209 @@ header {
     width: 1120px;
     background-color: $primary;
     margin-top: 20px;
+    margin-bottom: 20px;
     padding: 10px 5px;
     .hero {
         width: 520px;
         gap: 30px;
         h3 {
             color: white;
-            font-size: 48px;
-            font-weight: bold;
+            font-size: $lg-font-size;
+            font-weight: $heading-font-weight;
             margin: 0;
         }
         p {
             color: white;
-            font-size: 16px;
-            font-weight: 600;
+            font-size: $normal-font-size;
+            font-weight: $subheading-font-weight;
             margin: 0;
         }
     }
     .hero_image {
         width: 535px;
         height: 378px;
+        overflow: hidden;
+        img {
+            width: 689px;
+            height: auto;
+        }
+    }
+    .why_celestial {
+        color: $white;
+        padding: 58px 5px;
+        /* gap: 50px; */
+        margin-top: 20px;
+        margin-bottom: 20px;
+        .images_div {
+            width: 600px;
+            height: 388px;
+            position: relative;
+            img {
+                &:first-child {
+                    width: 386px;
+                    height: 290px;
+                    border-radius: 10px;
+                    top: 0;
+                    z-index: 20;
+                }
+                &:last-child {
+                    width: 323px;
+                    height: 353px;
+                    border-radius: 30px;
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    z-index: 5;
+                    border: 3px solid $primary;
+                }
+            }
+        }
+        .why_celestial_text {
+            width: 460px;
+        }
+        h5 {
+            font-size: $subheading-font-size;
+            font-weight: $subheading-font-weight;
+        }
+        p {
+            font-size: $normal-font-size;
+            font-weight: 500;
+        }
+    }
+}
+
+.services_section {
+    width: 1120px;
+    margin: 20px auto;
+    background-color: $primary;
+    padding: 10px 5px;
+
+    h3 {
+        font-size: $subheading-font-size;
+        font-weight: $subheading-font-weight;
+        color: $secondary;
+        margin: 20px auto;
+    }
+    .selected_service {
+        height: 450px;
+        padding: 40px 20px;
+        background-color: $blue-100;
+        position: relative;
+        h5 {
+            font-size: $heading-font-size;
+            font-weight: $heading-font-weight;
+            color: $blue-700;
+            margin: 0;
+        }
+        p {
+            font-size: $normal-font-size;
+            font-weight: 500;
+            color: $blue-700;
+            margin: 10px 0;
+        }
+        .service_cta_button {
+            position: absolute;
+            top: 40px;
+            right: 20px;
+            font-size: $normal-font-size;
+            font-weight: $heading-font-weight;
+        }
+    }
+    .services_scrollers {
+        margin: 20px auto;
+        width: 120px;
+        .bi {
+            font-size: $subheading-font-size;
+            color: $primary;
+            font-weight: $subheading-font-weight;
+            cursor: pointer;
+        }
+    }
+    .services_list {
+        position: relative;
+        bottom: 100px;
+    }
+    .service_card {
+        width: 200px;
+        height: 220px;
+        border-radius: 15px;
+        background-color: $blue-700;
+        gap: 10px;
+        padding: 10px;
+        position: relative;
+        h5 {
+            font-size: $normal-font-size;
+            font-weight: $subheading-font-weight;
+            color: $secondary;
+            margin: 0;
+        }
+        p {
+            font-size: $normal-font-size;
+            color: $white;
+            margin: 0;
+        }
+        .service_card_cta {
+            position: absolute;
+            bottom: 20px;
+            left: 10px;
+            font-size: $normal-font-size;
+            font-weight: $heading-font-weight;
+            color: $secondary;
+            cursor: pointer;
+        }
+        i {
+            color: $secondary;
+            font-size: $heading-font-size;
+            font-weight: $heading-font-weight;
+        }
+    }
+}
+
+footer {
+    width: 1120px;
+    background-color: $primary;
+    color: white;
+    padding: 10px 5px 12px;
+    border-top: 1px solid $white;
+    margin-top: 40px;
+
+    .footer_text {
+        font-size: 14px;
+        font-weight: 500;
+        margin: 0;
+    }
+    h5 {
+        font-size: $lg-font-size;
+        font-weight: $heading-font-weight;
+        margin: 0;
+    }
+    p, button {
+        font-size: 20px;
+        font-weight: $subheading-font-weight;
+    }
+   /*  .footer_logo {
+        width: 150px;
+    } */
+    .footer_quick_links {
+        p {
+            margin: 0;
+        }
+    }
+    .cp_rights {
+        p {
+            font-size: 12px !important;
+            font-weight: 400 !important;
+            margin: 0 !important;
+        }
+    }
+}
+.social_media_links {
+    gap: 10px;
+    position: absolute;
+    bottom: -180px;
+    right: 5px;
+    a, i {
+        font-size: $heading-font-size;
+        cursor: pointer;
     }
 }
