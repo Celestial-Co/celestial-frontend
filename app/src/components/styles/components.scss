@@ -1,10 +1,8 @@
-
-
-
-$primary: #1E3A8A;
-$secondary: #F6BD2E;
+$primary: #1e3a8a;
+$secondary: #f6bd2e;
 $blue-700: #122454;
-$blue-100: #C9D4F3;
+$blue-100: #c9d4f3;
+$dark: #1b2025;
 
 @import "~bootstrap/scss/_mixins";
 @import "~bootstrap/scss/_functions";
@@ -12,60 +10,107 @@ $blue-100: #C9D4F3;
 @import "~bootstrap/scss/bootstrap";
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 header {
-    width: 1120px;
-    background-color: $primary;
-    color: white;
-    padding: 10px 5px 12px;
-    text-align: center;
-    border-bottom: 1px solid #ffffff;
-    gap: 10px;
+  width: 1120px;
+  background-color: $primary;
+  color: white;
+  padding: 10px 5px 12px;
+  text-align: center;
+  border-bottom: 1px solid #ffffff;
+  gap: 10px;
 
-    .logo_n_name {
-        h1 {
-            font-size: 24px;
-            font-weight: bolder;
-            margin: 0;
-        }
+  .logo_n_name {
+    h1 {
+      font-size: 24px;
+      font-weight: bolder;
+      margin: 0;
     }
-    nav {
-        gap: 40px;
-        padding: 5px;
-    }
+  }
+  nav {
+    gap: 40px;
+    padding: 5px;
+  }
 }
 
 .home_hero {
-    width: 1120px;
-    background-color: $primary;
-    margin-top: 20px;
-    padding: 10px 5px;
-    .hero {
-        width: 520px;
-        gap: 30px;
-        h3 {
-            color: white;
-            font-size: 48px;
-            font-weight: bold;
-            margin: 0;
-        }
-        p {
-            color: white;
-            font-size: 16px;
-            font-weight: 600;
-            margin: 0;
-        }
+  width: 1120px;
+  background-color: $primary;
+  margin-top: 20px;
+  padding: 10px 5px;
+  .hero {
+    width: 520px;
+    gap: 30px;
+    h3 {
+      color: white;
+      font-size: 48px;
+      font-weight: bold;
+      margin: 0;
     }
-    .hero_image {
-        width: 535px;
-        height: 378px;
+    p {
+      color: white;
+      font-size: 16px;
+      font-weight: 600;
+      margin: 0;
     }
+  }
+  .hero_image {
+    width: 535px;
+    height: 378px;
+  }
+}
+
+.image-container {
+  width: 100%;
+  position: relative;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem; /* Space between sections */
+  width: 90%;
+  color: #007bff;
+  padding: 20px;
+}
+
+.left-section {
+  flex: 1;
+  max-width: 50%;
+}
+
+.right-section {
+  flex-shrink: 0;
+}
+
+.custom-btn {
+  background-color: transparent;
+  color: #122454;
+  border: 1px solid #122454;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.custom-btn:hover {
+  background-color: #122454;
+  color: white;
 }
