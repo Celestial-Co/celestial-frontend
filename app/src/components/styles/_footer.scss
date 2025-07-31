@@ -1,0 +1,118 @@
+// ./styles/_footer.scss
+
+.site-footer {
+    background-color: $primary;
+    color: white;
+    width: 100%; // Ensure it spans the full width
+    padding: 3rem 0 1.5rem;
+    //margin-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: $normal-font-size;
+
+    // Default alignment for all content on mobile is left-aligned for consistency
+    text-align: left;
+    
+    // On tablet and above, center the links and actions columns
+    @media (min-width: 768px) {
+        text-align: initial;
+
+        &__links, &__actions {
+            text-align: center;
+        }
+        
+        &__actions {
+             align-items: center; // Center content vertically too
+        }
+    }
+}
+
+// Column 1: CTA and Logo
+.site-footer__cta {
+    h5 {
+        // More reasonable font size for a footer
+        font-size: $subheading-font-size; 
+        font-weight: $heading-font-weight;
+    }
+    p {
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.9);
+        margin-bottom: 2rem;
+    }
+}
+
+.site-footer__logo {
+    .logo__image {
+        width: 80px;
+        height: auto;
+    }
+    .logo__name {
+        font-size: $heading-font-size;
+        font-weight: $heading-font-weight;
+        margin-left: 1rem;
+    }
+}
+
+// Column 2: Quick Links
+.site-footer__links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+
+    h6 {
+        color: $secondary;
+        font-size: 1.2rem;
+        font-weight: $subheading-font-weight;
+        margin-bottom: 0.5rem;
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+        &:hover {
+            color: $secondary;
+            text-decoration: underline;
+        }
+    }
+}
+
+// Column 3: Actions and Socials
+.site-footer__actions {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    height: 100%; // Make it take full height of the column
+    justify-content: space-between; // Pushes button to top, socials to bottom
+}
+
+.site-footer__socials {
+    display: flex;
+    gap: 1.5rem; // Space between icons
+    justify-content: center; // Center the icons within their container
+
+    a {
+        font-size: $heading-font-size;
+        color: white;
+        transition: color 0.3s ease;
+        &:hover {
+            color: $secondary;
+            transform: scale(1.1);
+        }
+    }
+}
+
+
+// --- Copyright Bar ---
+.site-footer__divider {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin: 2.5rem 0 1.5rem;
+}
+
+.site-footer__copyright {
+    p {
+        font-size: 0.875rem;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 0.7);
+        margin: 0;
+    }
+}

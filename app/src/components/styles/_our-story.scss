@@ -1,0 +1,190 @@
+// ./styles/_our-story.scss
+//@import "../../assets/images/cooperate_img_1.jpg";
+
+.our-story {
+    background-color: $primary;
+    padding: 5rem 0;
+    color: $white;
+}
+
+// --- TOP SECTION STYLES ---
+
+.our-story__headline {
+    position: relative;
+    padding-left: 2rem; // Space for the gradient bar
+
+    // The decorative gradient bar
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 8px;
+        height: 100%;
+        background: linear-gradient(180deg, rgba($white, 0.7), rgba($white, 0));
+        border-radius: 4px;
+    }
+
+    &__label {
+        font-weight: 500;
+        margin-bottom: 1rem;
+    }
+    
+    h3 {
+        font-size: $subheading-font-size;
+        font-weight: $heading-font-weight;
+        line-height: 1.4;
+    }
+}
+
+.our-story__highlight-card {
+    position: relative;
+    width: 280px;
+    height: 180px;
+    background-image: url("../../assets/images/cooperate_img_1.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    flex-shrink: 0;
+
+    .pills {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        display: flex;
+        gap: 0.5rem;
+
+        span {
+            background-color: rgba($blue-700, 0.7);
+            backdrop-filter: blur(5px);
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            border: 1px solid rgba($white, 0.2);
+        }
+    }
+}
+
+
+// --- BOTTOM SECTION STYLES ---
+
+.our-story__content-box {
+    background-color: $blue-100;
+    color: $blue-700;
+    border-radius: 16px;
+    padding: 2.5rem;
+
+    p {
+        color: $blue-700; // Explicitly override the default white
+        line-height: 1.7;
+    }
+}
+
+.stat-item {
+    &__number {
+        display: block;
+        font-size: $subheading-font-size; // Adjusted for better balance
+        font-weight: $heading-font-weight;
+    }
+    &__label {
+        font-size: $normal-font-size;
+        color: lighten($blue-700, 20%);
+    }
+}
+
+.client-profiles {
+    display: flex;
+
+    &__bubble {
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        background-color: $primary;
+        border: 3px solid $blue-100;
+        background-size: cover;
+
+        &:not(:first-child) {
+            margin-left: -24px; // Creates the overlap effect
+        }
+    }
+}
+
+.testimonials-link {
+    color: $blue-700;
+    font-weight: $subheading-font-weight;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: $primary;
+    }
+}
+
+// --- RESPONSIVE ADJUSTMENTS ---
+/*
+==============================================
+=== CREATIVE MOBILE & TABLET STYLES        ===
+==============================================
+*/
+@media (max-width: 991.98px) {
+    .our-story__headline {
+        text-align: left; // Keep it left-aligned for a more professional look
+        padding-left: 0;
+
+        &::before {
+            display: none; // Hide decorative bar
+        }
+    }
+
+    /* --- Swiper Carousel Styles --- */
+    .swiper-slide {
+      padding-bottom: 2.5rem; // Space for pagination dots
+    }
+
+    .swiper-pagination-bullet {
+        background-color: rgba($white, 0.5);
+        width: 8px;
+        height: 8px;
+    }
+    .swiper-pagination-bullet-active {
+        background-color: $secondary;
+    }
+
+    /* --- Interleaved Content Box Styles --- */
+    .our-story__content-box {
+        padding: 1.5rem;
+    }
+
+    // This turns the row of stats into a vertical list
+    .stat-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem; // Space between list items
+        padding-left: 1rem;
+        border-left: 2px solid $secondary; // A decorative left border
+    }
+    
+    // Individual stat item in the list
+    .stat-item {
+        display: flex;
+        align-items: baseline; // Lines up the number and text nicely
+        gap: 1rem;
+
+        &__number {
+            font-size: $subheading-font-size;
+        }
+        &__label {
+            color: $blue-700; // Text is darker now
+        }
+    }
+
+    // Center the client profiles + link on mobile
+    .client-profiles {
+       justify-content: center;
+    }
+}
+@media (max-width: 767.98px) {
+    .our-story__content-box { padding: 1.5rem; }
+    .our-story__headline h3 { font-size: $heading-font-size; }
+    .stat-item__number { font-size: $heading-font-size; }
+}

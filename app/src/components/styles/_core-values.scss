@@ -1,0 +1,76 @@
+// ./styles/_core-values.scss
+
+.core-values {
+    background-color: $primary;
+    padding: 5rem 0;
+}
+
+.core-values__title {
+    color: $secondary;
+    font-size: $lg-font-size;
+    font-weight: $heading-font-weight;
+    margin-bottom: 1rem;
+}
+
+.core-values__subtitle {
+    color: $blue-100;
+    font-size: 1.1rem;
+}
+
+
+/* --- Value Card Styling --- */
+
+.value-card {
+    position: relative;
+    background-color: $blue-100;
+    border-radius: 16px;
+    padding: 3.5rem 1.5rem 2.5rem;
+    text-align: center;
+    height: 100%; // Ensures all cards in a row are the same height
+    box-shadow: 0 10px 20px rgba(black, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 35px rgba(black, 0.2);
+    }
+}
+
+.value-card__icon-wrapper {
+    // This is the key to the overlapping icon effect
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 70px;
+    height: 70px;
+    background-color: $blue-700;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(black, 0.2);
+    border: 3px solid $blue-100;
+
+    .bi {
+        font-size: 2rem;
+        color: $secondary;
+    }
+}
+
+.value-card__content {
+    h5 {
+        font-size: $heading-font-size;
+        font-weight: $heading-font-weight;
+        color: $blue-700;
+        margin-bottom: 0.75rem;
+    }
+    
+    p {
+        font-size: $normal-font-size;
+        line-height: 1.6;
+        color: lighten($blue-700, 15%);
+        margin-bottom: 0;
+    }
+}

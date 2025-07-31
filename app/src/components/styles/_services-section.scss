@@ -1,0 +1,71 @@
+// ./styles/_services-section.scss
+
+.services-section {
+    width: 100%; // Responsive width
+    //margin: 3rem 0;
+    background-color: $primary;
+    padding: 3rem 0;
+    position: relative; // Needed for the card overlap effect
+
+    h3 {
+        font-size: $subheading-font-size;
+        font-weight: $subheading-font-weight;
+        color: $secondary;
+        margin-bottom: 2.5rem;
+    }
+
+    &__display {
+        background-color: $blue-100;
+        border-radius: 16px;
+        padding: 2rem;
+        color: $blue-700;
+
+        h5 {
+            font-size: $heading-font-size;
+            font-weight: $heading-font-weight;
+        }
+
+        p {
+            font-size: $normal-font-size;
+            font-weight: 500;
+            margin-top: 1rem;
+        }
+
+        // On mobile, the button will stack below. Give it some space.
+        @media (max-width: 991.98px) {
+            text-align: center;
+            padding: 2.5rem 1.5rem;
+
+            .btn {
+                margin-top: 1.5rem;
+            }
+        }
+    }
+
+    &__scrollers {
+        margin: 2rem auto 0;
+        gap: 2rem;
+        
+        .bi {
+            font-size: $subheading-font-size;
+            color: white;
+            cursor: pointer;
+            transition: color 0.3s ease;
+            
+            &:hover {
+                color: $secondary;
+            }
+        }
+    }
+    
+    // This is the container for the cards below
+    &__list {
+        // Negative margin creates the overlap effect safely
+        margin-top: -80px; 
+
+        // On smaller screens, remove the overlap to prevent weird layout issues
+        @media (max-width: 767.98px) {
+            margin-top: 2rem;
+        }
+    }
+}

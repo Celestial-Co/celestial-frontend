@@ -1,0 +1,55 @@
+// ./styles/_service-card.scss
+
+.service-card {
+    border-radius: 15px;
+    background-color: $blue-700;
+    padding: 1.5rem 1.25rem;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    transition: all 0.3s ease-in-out;
+    border: 3px solid transparent;
+
+    h5 {
+        font-size: $normal-font-size;
+        font-weight: $subheading-font-weight;
+        color: $secondary;
+        margin: 0;
+    }
+
+    p {
+        font-size: $normal-font-size;
+        color: white;
+        margin: 0;
+        flex-grow: 1; // Allows the CTA to be pushed to the bottom
+    }
+
+    &__cta {
+        align-self: flex-start;
+        font-size: $heading-font-size;
+        color: $secondary;
+    }
+    
+    // Default hover state
+    &:hover {
+        transform: translateY(-8px);
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    }
+    
+    // Active state styles
+    &--active {
+        background-color: $blue-100;
+        transform: translateY(-15px) scale(1.05);
+        box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.25);
+        border-color: $secondary;
+        
+        h5, p, i {
+            color: $blue-700;
+        }
+
+        & .service-card__cta > i {
+            color: $blue-700;
+        }
+    }
+}

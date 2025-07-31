@@ -1,0 +1,68 @@
+/* ./styles/main.scss */
+
+// 1. VARIABLE DEFINITIONS
+// Define all your colors, fonts, and other variables here so they can be used everywhere.
+$primary: #1E3A8A;
+$secondary: #F6BD2E;
+$blue-700: #122454;
+$blue-100: #C9D4F3;
+$white: #ffffff; // Good to have a variable for white, too
+
+// Font sizes
+$lg-font-size: 48px;
+$heading-font-size: 24px;
+$subheading-font-size: 32px;
+$normal-font-size: 16px;
+
+// Font weights
+$heading-font-weight: 800;
+$subheading-font-weight: 700;
+
+
+// 2. BOOTSTRAP FRAMEWORK
+// Import the functions and variables from Bootstrap first.
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+
+// Optional: You can override Bootstrap variables here. For example:
+// $container-padding-x: 2rem;
+
+
+// 3. GLOBAL STYLES & RESETS
+// Your default styles from the prompt. It's good to apply them to the body too.
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffffff; // A neutral body background is a good default
+    font-family: 'Your-Font-Family', sans-serif; // Set your default font here
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+// 4. BOOTSTRAP CORE & UTILITIES
+// Import the rest of Bootstrap.
+@import "bootstrap/scss/bootstrap";
+
+
+// 5. COMPONENT & PAGE STYLES
+// Finally, import your own custom component and page styles.
+// The order matters.
+@import "../components/styles/header";
+@import "../components/styles/home-hero";
+@import "../components/styles/service-card";
+@import "../components/styles/services-section";
+@import "../components/styles/footer";
+@import "../components/styles/company-intro";
+@import "../components/styles/our-story";
+@import "../components/styles/core-values";
+@import "../components/styles/team-section";
+@import "../components/styles/testimonials-section";
+@import "../pages/pages"; // Your page-specific styles from above

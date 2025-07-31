@@ -1,0 +1,16 @@
+$primary: #1E3A8A;
+$secondary: #F6BD2E;
+$blue-700: #122454;
+$blue-100: #C9D4F3;
+
+$lg-font-size: 48px;
+$heading-font-size: 24px;
+$subheading-font-size: 32px;
+$normal-font-size: 16px;
+$heading-font-weight: 800;
+$subheading-font-weight: 700;
+
+@import "~bootstrap/scss/_mixins";
+@import "~bootstrap/scss/_functions";
+@import "~bootstrap/scss/_variables";
+@import "~bootstrap/scss/bootstrap";

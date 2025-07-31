@@ -1,0 +1,144 @@
+// ./styles/_testimonials-section.scss
+
+.testimonials-section {
+    padding: 5rem 0;
+    background-color: $blue-100;
+}
+
+.testimonials-section__title {
+    font-size: $subheading-font-size;
+    font-weight: $heading-font-weight;
+    color: $blue-700;
+}
+
+.testimonials-section__subtitle {
+    font-size: $normal-font-size;
+    color: lighten($blue-700, 20%);
+    margin-bottom: 2rem;
+}
+
+.testimonials-carousel-wrapper {
+    position: relative;
+    padding: 0 40px; // Gives space for the nav buttons on the sides
+}
+
+
+/* --- Slide Content Styling --- */
+.testimonial-slide {
+    background-color: transparent; // Slides are now part of the main background
+    padding: 2rem 0;
+}
+
+.testimonial-slide__client-info {
+    .client-info__image {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin: 0 auto 1.5rem;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        border: 4px solid $white;
+    }
+    .client-info__name {
+        font-weight: $subheading-font-weight;
+        color: $primary;
+    }
+    .client-info__title {
+        color: lighten($blue-700, 15%);
+        font-weight: 500;
+    }
+}
+
+.testimonial-slide__quote-wrapper {
+    position: relative;
+    padding: 1.5rem;
+    border-left: 3px solid $secondary;
+    
+    .quote-icon {
+        position: absolute;
+        top: -10px;
+        left: 0;
+        font-size: 6rem;
+        color: $primary;
+        opacity: 0.08;
+        z-index: 1;
+        transform: translateX(-20px);
+    }
+    
+    .quote-text {
+        position: relative;
+        z-index: 2;
+        font-size: 1.25rem;
+        line-height: 1.7;
+        font-style: italic;
+        color: $blue-700;
+    }
+}
+
+
+/* --- Custom Swiper Controls --- */
+.swiper-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: $white;
+    color: $primary;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: $primary;
+        color: $white;
+    }
+
+    &::after { display: none; }
+    i { font-size: 2rem; font-weight: bold; }
+}
+
+.testimonial-swiper-button-prev { left: 0; }
+.testimonial-swiper-button-next { right: 0; }
+
+
+// Swiper pagination dots styling
+.swiper-pagination {
+    position: static; // Place it below the slider
+    margin-top: 2rem;
+}
+.swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: lighten($primary, 50%);
+    opacity: 1;
+}
+.swiper-pagination-bullet-active {
+    background-color: $primary;
+}
+
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 767.98px) {
+    .testimonials-carousel-wrapper {
+        padding: 0; // Remove side padding on mobile
+    }
+    
+    .swiper-button {
+        display: none; // Hide arrows, rely on touch swipe
+    }
+
+    .testimonial-slide__quote-wrapper {
+        border-left: none;
+        text-align: center;
+        margin-top: 1rem;
+
+        .quote-icon {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}

@@ -1,0 +1,96 @@
+// ./styles/_header.scss
+
+// Main header container
+.site-header {
+    width: 100%; // Use 100% width to be fluid
+    background-color: $primary;
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+    // Inner container to control max-width and padding
+    &__container {
+        max-width: 1120px;
+        margin: 0 auto; // Center the container
+        padding: 1rem 1.5rem; // Add horizontal padding for smaller screens
+    }
+
+    &__topbar {
+        gap: 1.5rem; // Add some space between items
+    }
+}
+
+// Logo styling
+.logo {
+    gap: 1rem; // Space between image and text
+
+    &__image {
+        width: 60px; // Slightly smaller for better balance on mobile
+        height: auto;
+    }
+
+    &__name {
+        font-size: $heading-font-size;
+        font-weight: $heading-font-weight;
+        margin: 0;
+        // Hide the text on very small screens to prevent awkward wrapping
+        @media (max-width: 576px) {
+            display: none;
+        }
+    }
+}
+
+// Main Desktop Navigation
+.site-header__nav {
+    gap: 40px;
+    padding-top: 1rem;
+
+    a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        padding-bottom: 0.5rem;
+        border-bottom: 2px solid transparent;
+        transition: border-color 0.3s ease;
+
+        &:hover {
+            color: $secondary;
+            border-bottom-color: $secondary;
+        }
+    }
+}
+
+// Hamburger Button Styling
+.hamburger-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem; // Make the icon large and easy to tap
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+}
+
+// Mobile Navigation Menu Styling
+.mobile-nav {
+    display: flex;
+    flex-direction: column;
+    background-color: $blue-700; // A slightly darker shade for contrast
+    width: 100%;
+    padding: 1rem 1.5rem 1.5rem;
+    
+    a {
+        color: white;
+        padding: 1rem 0;
+        text-decoration: none;
+        font-size: $normal-font-size;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        
+        &:last-child {
+            border-bottom: none;
+        }
+
+        &:hover {
+            color: $secondary;
+        }
+    }
+}
