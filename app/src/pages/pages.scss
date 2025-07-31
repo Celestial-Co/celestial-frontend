@@ -1,9 +1,10 @@
-$primary: #1E3A8A;
+// ./styles/pages.scss
 
-.content {
-    width: 1120px;
-}
+// This file is now much cleaner.
+// It should only contain styles that are SPECIFIC to the landing page layout itself.
+// Since our layout is very simple, it might even be empty for now, which is perfectly fine.
 
-.app_container {
-    background-color: $primary;
+// For example, if you wanted to add a unique background to just this page's <main> area:
+.landing-page main {
+    // background-color: #f0f2f5; // example
 }
